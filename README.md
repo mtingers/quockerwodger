@@ -11,7 +11,6 @@ x = 0
 
 uint x = 0
 x = 0 # Incorrect: this is not a uint but int type
-
 ```
 
 ### Lists
@@ -68,11 +67,27 @@ for k, v in m.items():
 del(m['foo']) # deletes key foo
 ```
 
+### functions
+```python
+def foo():
+  return 1
+
+x = foo() # x is an integer
+
+string bar(s=None):
+  if s:
+    return 'prefix_'+s
+  return 'prefix_'
+
+s = bar('test')
+print(s) # => prefix_test
+```
+
 ### classes
 
 ```python
 class Foo:
-  def __init__(self, x, y=None):
+  def __init__(self, int x, int y=None):
     self.x = x
     self.y = y
     self.baz = False
@@ -89,4 +104,8 @@ Bar b = Bar(10)
 b.x += 3
 b.bar() # => 15
 
+x = getattr(b, 'x', None)
+z = getattr(b, 'z', None)
+print(x) # => 13
+print(z) # => None
 ```
