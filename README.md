@@ -43,6 +43,10 @@ l.sort()
 print(l)        # => [1, 2, 3, 3, 5, 6]
 l.reverse()
 print(l)        # => [6, 5, 3, 3, 2, 1]
+
+if 6 in l:
+  print("6 is in list 'l'")
+
 ```
 
 ### dicts
@@ -62,4 +66,27 @@ for k, v in m.items():
   print(k, v) # => 0 hello ...
 
 del(m['foo']) # deletes key foo
+```
+
+### classes
+
+```python
+class Foo:
+  def __init__(self, x, y=None):
+    self.x = x
+    self.y = y
+    self.baz = False
+    
+  def bar(self):
+    print(self.x+2)
+    if self.y:
+      print(self.y+3)
+    
+class Bar(Foo):
+  pass
+
+Bar b = Bar(10)
+b.x += 3
+b.bar() # => 15
+
 ```
