@@ -5,25 +5,46 @@
 ### Numbers
 
 ```python
-# Two ways to declare integer named x
+# Two ways to declare signed integer named x
 int x = 0
-x = 0
+x2 = 0
 
-uint x = 0
-x = 0 # Incorrect: this is not a uint but int type
+# Declare unsigned integer
+uint y = 0
+# Incorrect: this works but is not a unsigned int but signed integer type
+y2 = 0 
+
+# float and double
+float f = 33.1233
+double d = 1.3210123
+
+test = x + x2
+test2 = x + y # ERROR on different types, must use cast
+test2 = (uint)x + y # Works with cast
+
+```
+### tuples (immutable)
+
+```python
+t1 = (1,2,3) # integers
+t2 = ("a", "b", 3, uint(2)) # mixed types
+
+print(t1[-1]) # => 3
+print(t2[1])  # => b
 ```
 
 ### Lists
 
 ```python
 # Create a list of integers
-list{int} l = [3,1,5,3,2,6]
+list{int} l = [3,1,5,3,2]
+l.append(6)
 
 # Create a list of strings
 list{string} s = []
 
 # Create a mixed list, two ways
-list{mixed} m = [1, "abc", 2, "xyz", 3]
+list{mixed} m = [1, string("abc"), uint(2), "xyz", 3]
 m = [] # This works too. Default is mixed type if not specified
 
 print(m[0])   # => 1
@@ -74,12 +95,12 @@ def foo():
 
 x = foo() # x is an integer
 
-string bar(s=None):
-  if s:
-    return 'prefix_'+s
+string bar(string suffix=None):
+  if suffix:
+    return 'prefix_'+suffix
   return 'prefix_'
 
-s = bar('test')
+s = bar(suffix='test')
 print(s) # => prefix_test
 ```
 
