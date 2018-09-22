@@ -173,12 +173,13 @@ print(f.index)  # => 0
 
 
 list{Foo} foos = []
-foos.append(f)  # Makes a copy of f and inserts into foos list
+foos.append(f)  # Makes a pointer to f
 
 del(f.name)     # Error
 del(f)          # Works
+print(f)        # Error
 
-print(foos[0])  # Works since f was a copy
+print(foos[0])  # Works since f will be block scoped in underlying c code with a real parent object to each
 ```
 
 ### Functions
