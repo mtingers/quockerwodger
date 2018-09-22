@@ -1,6 +1,6 @@
 # qw-lang (quockerwodger)
 
-## Features 
+## Features
 
 Quockerwodger feature proposal:
 1. Compiled language with a high-level syntax
@@ -17,7 +17,6 @@ Quockerwodger feature proposal:
 12. Debug and production build options
 13. Type inference
 
-## Basics
 
 ## Types
 
@@ -42,16 +41,16 @@ Quockerwodger feature proposal:
   x = 0
   ```
 * Unsigned integers: None
-* Floats: 
+* Floats:
   ```python
   x = 1.1
   ```
 * Doubles: None
-* Tuples: 
+* Tuples:
   ```python
   x = (1,2,3)
   ```
-* Lists: 
+* Lists:
   ```python
   x = [1,2,3]
   x = [uint(1), int(2), 3]
@@ -61,7 +60,7 @@ Quockerwodger feature proposal:
   x = 'foo'
   x = "foo"
   ```
-* Boolean: x = True
+* Boolean:
   ```python
   x = True
   x = False
@@ -70,7 +69,9 @@ Quockerwodger feature proposal:
   ```python
   x = {'a':1, 'b':2}
   ```
-  
+
+## Examples
+
 ### Numbers
 
 ```python
@@ -81,7 +82,7 @@ x2 = 0
 # Declare unsigned integer
 uint y = 0
 # Incorrect: this works but is not a unsigned int but signed integer type
-y2 = 0 
+y2 = 0
 
 # float and double
 float f = 33.1233
@@ -89,7 +90,7 @@ double d = 1.3210123
 
 test = x + x2
 test2 = x + y # ERROR on different types, must use cast
-test2 = (uint)x + y # Works with cast
+test2 = uint(x) + y # Works with cast
 
 ```
 ### tuples (immutable)
@@ -122,7 +123,7 @@ print(m[1:])  # => ["abc", 2, "xyz", 3]
 
 for i in m:
   print("{} {}", i, type(i)) # => 1 int
-  
+
 index = m.index('abc')
 print(index)    # => 1
 print(m[index]) # => 'abc'
@@ -181,12 +182,12 @@ class Foo:
     self.x = x
     self.y = y
     self.baz = False
-    
+
   def bar(self):
     print(self.x+2)
     if self.y:
       print(self.y+3)
-    
+
 class Bar(Foo):
   pass
 
