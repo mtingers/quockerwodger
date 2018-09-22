@@ -89,11 +89,11 @@ float f = 33.1233
 double d = 1.3210123
 
 test = x + x2
-test2 = x + y # ERROR on different types, must use cast
+test2 = x + y # Compile time error on different types, must use cast
 test2 = uint(x) + y # Works with cast
 
 ```
-### tuples (immutable)
+### Tuples (immutable)
 
 ```python
 t1 = (1,2,3) # integers
@@ -139,7 +139,7 @@ if 6 in l:
 
 ```
 
-### dicts
+### Dictionaries
 
 ```python
 dict{string, int} d = {}
@@ -158,7 +158,7 @@ for k, v in m.items():
 del(m['foo']) # deletes key foo
 ```
 
-### functions
+### Functions
 ```python
 def foo():
   return 1
@@ -174,7 +174,7 @@ s = bar(suffix='test')
 print(s) # => prefix_test
 ```
 
-### classes
+### Classes
 
 ```python
 class Foo:
@@ -200,3 +200,16 @@ z = getattr(b, 'z', None)
 print(x) # => 13
 print(z) # => None
 ```
+
+## Building
+
+```bash
+# Produces production 'hello' executable
+quack build hello.qw
+```
+
+```bash
+# Build debug 'hello' executable
+quack debug hello.qw
+```
+
