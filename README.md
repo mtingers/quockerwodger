@@ -1,5 +1,22 @@
 # qw-lang (quockerwodger)
 
+## Features 
+
+Quockerwodger feature proposal:
+1. Compiled language with a high-level syntax
+2. Follows many of Python's philosophies
+3. Syntax & semantics are based off of Python (writes like Python to the extent that some Python code will work unchanged)
+4. Generates safe C code that is compiled to an executable
+5. Fast compilation times due to how the C code is generated
+6. No garbage collection
+7. Memory safety
+8. Thread safety
+9. C library interoperability
+10. Compiles to small executables
+11. Static build option
+12. Debug and production build options
+13. Type inferrance
+
 ## Basics
 
 ### Numbers
