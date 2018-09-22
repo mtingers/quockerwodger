@@ -207,11 +207,11 @@ print(z) # => None
 
 ```bash
 # Produces production 'hello' executable
-quack build hello.qw
+quock build hello.qw
 ```
 
 ```bash
 # Build debug 'hello' executable
-quack debug hello.qw
+quock debug hello.qw
 ```
 
