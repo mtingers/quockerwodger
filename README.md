@@ -27,6 +27,7 @@ Quockerwodger feature proposal:
 * Tuples: __tuple__
 * Lists: __list__, __list{TYPE}__
 * Strings: __string__
+* Dictionaries: __dict__
 * Structures: __struct__
 * Classes: __class__
 * Boolean: __bool__
@@ -36,10 +37,11 @@ Quockerwodger feature proposal:
 
 ## Type Inference Defaults
 
-* Signed integers:
+* Signed 32bit integers:
   ```python
   x = 0
   ```
+* Signed 64bit integers: None
 * Unsigned integers: None
 * Floats:
   ```python
@@ -65,7 +67,7 @@ Quockerwodger feature proposal:
   x = True
   x = False
   ```
-* Dicts:
+* Dictionaries:
   ```python
   x = {'a':1, 'b':2}
   ```
