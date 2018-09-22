@@ -19,6 +19,58 @@ Quockerwodger feature proposal:
 
 ## Basics
 
+## Types
+
+* Signed integers: __int__ (32bit), __int64__
+* Unsigned integers: __uint__ (32bit), __uint64__
+* Floats: __float__ (7 decimal digits of precision)
+* Doubles: __double__ (15 decimal digits of precision)
+* Tuples: __tuple__
+* Lists: __list__, __list{TYPE}__
+* Strings: __string__
+* Structures: __struct__
+* Classes: __class__
+* Boolean: __bool__
+* Binary data: __bytes__
+* Mixed types: __mixed__
+
+
+## Type Inference Defaults
+
+* Signed integers:
+  ```python
+  x = 0
+  ```
+* Unsigned integers: None
+* Floats: 
+  ```python
+  x = 1.1
+  ```
+* Doubles: None
+* Tuples: 
+  ```python
+  x = (1,2,3)
+  ```
+* Lists: 
+  ```python
+  x = [1,2,3]
+  x = [uint(1), int(2), 3]
+  ```
+* Strings:
+  ```python
+  x = 'foo'
+  x = "foo"
+  ```
+* Boolean: x = True
+  ```python
+  x = True
+  x = False
+  ```
+* Dicts:
+  ```python
+  x = {'a':1, 'b':2}
+  ```
+  
 ### Numbers
 
 ```python
