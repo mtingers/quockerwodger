@@ -160,6 +160,27 @@ for k, v in m.items():
 del(m['foo']) # deletes key foo
 ```
 
+### Structs
+```python
+
+struct Foo:
+    string name = "Foo"
+    uint index = 0
+
+Foo f = Foo()
+print(f.name)   # => Foo
+print(f.index)  # => 0
+
+
+list{Foo} foos = []
+foos.append(f)  # Makes a copy of f and inserts into foos list
+
+del(f.name)     # Error
+del(f)          # Works
+
+print(foos[0])  # Works since f was a copy
+```
+
 ### Functions
 ```python
 def foo():
@@ -174,6 +195,19 @@ string bar(string suffix=None):
 
 s = bar(suffix='test')
 print(s) # => prefix_test
+
+struct Baz:
+    int x = 0
+    int y = 1
+
+Baz foo(int a, int b):
+    Baz s = Baz()
+    s.x = a
+    s.b = b
+    return s
+
+Baz s = foo(10, 12)
+
 ```
 
 ### Classes
