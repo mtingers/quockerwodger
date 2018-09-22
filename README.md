@@ -15,7 +15,7 @@ Quockerwodger feature proposal:
 10. Compiles to small executables
 11. Static build option
 12. Debug and production build options
-13. Type inferrance
+13. Type inference
 
 ## Basics
 
